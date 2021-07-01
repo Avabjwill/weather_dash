@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Weather Dashboard Header -->
+    <header class="navbar navbar-dark bg-dark">
+        <h1 class="display-4 text-light mx-auto">Weather Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="row 2">
+            <!-- Column for the sidebar -->
+            <aside class="col-lg-4">
+                <div class="card bg-light p-2 mb-2">
+                    <!-- Search form -->
+                    <h4>Enter a City Name:</h4>
+                    <form class="form-inline" id="city-name">
+                        <input class="form-control sm-2" id="city-input" type="search" aria-label="Search">
+                        </form>
+                    <ul class="list-group mt-2" id="city-list">
+                    </ul>
+                </div>
+            </aside>
+
+                <section class="details" id="current" style="display:none;">
+                    <h1 id="City"></h1>
+                    <h5 id="Date"></h5>
+                    <p id="Temperature"></p>
+                    <form name="converter">
+                        Celsius: <input type="text" name="celsius" onChange="CelsiusConverter()"><br />
+                        Fahrenheit: <input type="text" name="fahrenheit" onChange="FahrenheitConverter()"><br />
+                        <input type="button" value="Convert!" />
+                    </form>
+                    <p id="Humidity"></p>
+                    <p id="Wind gauge"></p>
+                    <p id="UV-index">UV Index:</p>
+                </section>
+                <!-- Placehold for the 5-day forecast -->
+                <section class="mt-2 mb-2" id="five-day" style="display:none;">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="ind-days">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+    
